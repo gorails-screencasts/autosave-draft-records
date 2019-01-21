@@ -6,6 +6,13 @@ GIT
     devise-bootstrapped (0.2.0)
 
 GIT
+  remote: https://github.com/jmfederico/draftsman.git
+  revision: 7ee1f11c91eb65525f370152e9328e21fd1c0c1c
+  specs:
+    draftsman (0.8.0.dev)
+      activerecord (>= 4.2, < 5.3)
+
+GIT
   remote: https://github.com/mdeering/gravatar_image_tag.git
   revision: c02351f7d6649e2346394e33164a7154e671ec19
   specs:
@@ -344,6 +351,7 @@ DEPENDENCIES
   devise (~> 4.4, >= 4.4.3)
   devise-bootstrapped!
   devise_masquerade (~> 0.6.2)
+  draftsman!
   font-awesome-sass (~> 5.5, >= 5.5.0.1)
   foreman (~> 0.84.0)
   friendly_id (~> 5.2, >= 5.2.4)
