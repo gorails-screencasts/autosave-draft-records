@@ -13,7 +13,7 @@ export default class extends Controller {
   static targets = [ "form", "status" ]
 
   connect() {
-    this.timeout = null
+    this.timeout  = null
     this.duration = this.data.get("duration") || 1000
   }
 
@@ -27,17 +27,17 @@ export default class extends Controller {
   }
 
   success() {
-    this.statusTarget.textContent = "Saved!"
-
-    setTimeout(() => {
-      this.statusTarget.textContent = ""
-    }, 2000)
+    this.setStatus("Saved!")
   }
 
   error() {
-    this.statusTarget.textContent = "Unable to save!"
+    this.setStatus("Unable to save!")
+  }
 
-    setTimeout(() => {
+  setStatus(message) {
+    this.statusTarget.textContent = message
+
+    this.timeout = setTimeout(() => {
       this.statusTarget.textContent = ""
     }, 2000)
   }
